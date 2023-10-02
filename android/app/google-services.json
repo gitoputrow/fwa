@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "288029868075",
+    "project_id": "freeworkoutapss",
+    "storage_bucket": "freeworkoutapss.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:288029868075:android:35475b77215d0b887c6a6e",
+        "android_client_info": {
+          "package_name": "com.example.free_workout_apps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "288029868075-b0g869ku5npr5s3o43oihim7kbjc1334.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5EK90Msx6sro16kz2hls7bZvivOXFqmU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "288029868075-b0g869ku5npr5s3o43oihim7kbjc1334.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
