@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:free_workout_apps/page/DashboardPageView.dart';
 import 'package:free_workout_apps/page/HomeScreenPageView.dart';
+import 'package:free_workout_apps/page/SplashScreenPageView.dart';
 import 'package:free_workout_apps/page/authentificationpage/LoginPageView.dart';
 import 'package:free_workout_apps/provider/global/AuthentificationProvider.dart';
 import 'package:free_workout_apps/provider/global/DashboardProvider.dart';
@@ -54,7 +55,7 @@ class _MyAppState extends State<MyApp> {
           ],
         );
       },
-      home: DashboardPageView(),
+      home: SplashScreenPageView()
     );
   }
 }
