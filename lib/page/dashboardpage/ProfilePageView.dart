@@ -134,7 +134,7 @@ class ProfilePageView extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      Provider.of<DashboardProvider>(context, listen: false).userData.name!,
+                      "${Provider.of<DashboardProvider>(context, listen: false).userData.name!}",
                       textScaleFactor: 1,
                       style: TextStyle(
                         color: greycolor,
@@ -202,7 +202,10 @@ class ProfilePageView extends StatelessWidget {
                 InkWell(
                   onTap: () {
                     Navigator.push(
-                        context, MaterialPageRoute(builder: (context) => EditProfilePageView()));
+                            context, MaterialPageRoute(builder: (context) => EditProfilePageView()))
+                        .then((value) async =>
+                            await Provider.of<DashboardProvider>(context, listen: false)
+                                .getUserData(context));
                   },
                   child: Container(
                     decoration: BoxDecoration(
@@ -246,7 +249,10 @@ class ProfilePageView extends StatelessWidget {
           InkWell(
             onTap: () {
               Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => EditAccountPageView()));
+                      context, MaterialPageRoute(builder: (context) => EditAccountPageView()))
+                  .then((value) async =>
+                      await Provider.of<DashboardProvider>(context, listen: false)
+                          .getUserData(context));
             },
             child: Container(
               decoration: BoxDecoration(

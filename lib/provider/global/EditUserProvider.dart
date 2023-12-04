@@ -170,15 +170,17 @@ class EditUserProvider with ChangeNotifier {
           .child("$id")
           .child("weight")
           .set(etWeight.text.isEmpty ? userData.weight : etWeight.text);
+      Navigator.pop(context);
+      Navigator.pop(context);
       ToastMessageCustom.ToastMessage("Profile Updated", Colors.green, context);
-      Navigator.pushAndRemoveUntil(
-          context,
-          MaterialPageRoute(
-            builder: (context) => DashboardPageView(
-              currentPage: 2,
-            ),
-          ),
-          (route) => false);
+      // Navigator.pushAndRemoveUntil(
+      //     context,
+      //     MaterialPageRoute(
+      //       builder: (context) => DashboardPageView(
+      //         currentPage: 2,
+      //       ),
+      //     ),
+      //     (route) => false);
     }
   }
 
@@ -232,22 +234,26 @@ class EditUserProvider with ChangeNotifier {
       await changeUsername(context);
       await changePassword(context);
       if (updateAccountFailed == false) {
-        Navigator.pushAndRemoveUntil(
-            context,
-            MaterialPageRoute(
-              builder: (context) => DashboardPageView(
-                currentPage: 2,
-              ),
-            ),
-            (route) => false);
+        Navigator.pop(context);
+        Navigator.pop(context);
+        ToastMessageCustom.ToastMessage("Account Updated", Colors.green, context);
+        // Navigator.pushAndRemoveUntil(
+        //     context,
+        //     MaterialPageRoute(
+        //       builder: (context) => DashboardPageView(
+        //         currentPage: 2,
+        //       ),
+        //     ),
+        //     (route) => false);
       }
     }
   }
 
-  Future PickImage(ImageSource source) async {
+  Future PickImage(ImageSource source, context) async {
     try {
       final image = await ImagePicker().pickImage(source: source);
       if (image == null) return;
+      Navigator.pop(context);
       File? imageTemporary = File(image.path);
       imageSource = imageTemporary;
       imagepath = imageTemporary.path;

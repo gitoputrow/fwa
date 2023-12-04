@@ -187,9 +187,9 @@ class _EditProfilePageState extends State<EditProfilePage> {
                                             builder: (context) {
                                               return CustomBottomSheetPic(
                                                   ontapCamera: () =>
-                                                      provider.PickImage(ImageSource.camera),
+                                                      provider.PickImage(ImageSource.camera,context),
                                                   ontapPicture: () =>
-                                                      provider.PickImage(ImageSource.gallery));
+                                                      provider.PickImage(ImageSource.gallery,context));
                                             },
                                           );
                                         },

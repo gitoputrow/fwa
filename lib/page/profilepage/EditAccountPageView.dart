@@ -123,19 +123,19 @@ class _EditAccountPageState extends State<EditAccountPage> {
                               height: 28,
                             ),
                             DottedLine(
-                          direction: Axis.horizontal,
-                          alignment: WrapAlignment.center,
-                          lineLength: double.infinity,
-                          lineThickness: 0.8,
-                          dashLength: 14.0,
-                          dashColor: greycolor,
-                          dashGapLength: 7.0,
-                          dashGapRadius: 0.0,
-                        ),
-                        SizedBox(
+                              direction: Axis.horizontal,
+                              alignment: WrapAlignment.center,
+                              lineLength: double.infinity,
+                              lineThickness: 0.8,
+                              dashLength: 14.0,
+                              dashColor: greycolor,
+                              dashGapLength: 7.0,
+                              dashGapRadius: 0.0,
+                            ),
+                            SizedBox(
                               height: 28,
                             ),
-                        Text(
+                            Text(
                               "Change Your Password",
                               textScaleFactor: 1,
                               style: TextStyle(
@@ -158,17 +158,18 @@ class _EditAccountPageState extends State<EditAccountPage> {
                                   obscureText: value.isInvisibleOldPass,
                                   textInputType: TextInputType.name,
                                   suffixIcon: Padding(
-                        padding: EdgeInsets.only(right: 12),
-                        child: InkWell(
-                          onTap: () => value.isInvisibleOldPass = value.isInvisibleOldPass == true ? false : true,
-                          child: Icon(
-                            value.isInvisibleOldPass
-                                ? Icons.visibility_off
-                                : Icons.visibility,
-                            color: primarycolor.withOpacity(0.6),
-                          ),
-                        ),
-                      ),
+                                    padding: EdgeInsets.only(right: 12),
+                                    child: InkWell(
+                                      onTap: () => value.isInvisibleOldPass =
+                                          value.isInvisibleOldPass == true ? false : true,
+                                      child: Icon(
+                                        value.isInvisibleOldPass
+                                            ? Icons.visibility_off
+                                            : Icons.visibility,
+                                        color: primarycolor.withOpacity(0.6),
+                                      ),
+                                    ),
+                                  ),
                                   title: ""),
                             ),
                             SizedBox(
@@ -183,20 +184,20 @@ class _EditAccountPageState extends State<EditAccountPage> {
                                   obscureText: value.isInvisibleNewPass,
                                   textInputType: TextInputType.name,
                                   suffixIcon: Padding(
-                        padding: EdgeInsets.only(right: 12),
-                        child: InkWell(
-                          onTap: () => value.isInvisibleNewPass = value.isInvisibleNewPass == true ? false : true,
-                          child: Icon(
-                            value.isInvisibleNewPass
-                                ? Icons.visibility_off
-                                : Icons.visibility,
-                            color: primarycolor.withOpacity(0.6),
-                          ),
-                        ),
-                      ),
+                                    padding: EdgeInsets.only(right: 12),
+                                    child: InkWell(
+                                      onTap: () => value.isInvisibleNewPass =
+                                          value.isInvisibleNewPass == true ? false : true,
+                                      child: Icon(
+                                        value.isInvisibleNewPass
+                                            ? Icons.visibility_off
+                                            : Icons.visibility,
+                                        color: primarycolor.withOpacity(0.6),
+                                      ),
+                                    ),
+                                  ),
                                   title: ""),
                             ),
-                            
                             SizedBox(
                               height: 40,
                             ),
