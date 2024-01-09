@@ -33,67 +33,63 @@ class _DashboardPageViewState extends State<DashboardPageView> {
   @override
   Widget build(BuildContext context) {
     return Consumer<DashboardProvider>(
-        builder: (context, controller, child) => controller.startPage == true
-            ? Scaffold(
+        builder: (context, controller, child) => Scaffold(
+            backgroundColor: darkcolor,
+            body: SafeArea(
+              child: controller.pages[controller.currentPage],
+            ),
+            bottomNavigationBar: Container(
+              padding: EdgeInsets.only(bottom: 5, top: 5),
+              child: BottomNavigationBar(
+                elevation: 0,
+                onTap: controller.changePage,
+                currentIndex: controller.currentPage,
+                showSelectedLabels: false,
+                showUnselectedLabels: false,
+                type: BottomNavigationBarType.fixed,
                 backgroundColor: darkcolor,
-                body: SafeArea(
-                  child: controller.pages[controller.currentPage],
-                ),
-                bottomNavigationBar: Container(
-                  padding: EdgeInsets.only(bottom: 5, top: 5),
-                  child: BottomNavigationBar(
-                    elevation: 0,
-                    onTap: controller.changePage,
-                    currentIndex: controller.currentPage,
-                    showSelectedLabels: false,
-                    showUnselectedLabels: false,
-                    type: BottomNavigationBarType.fixed,
-                    backgroundColor: darkcolor,
-                    items: [
-                      BottomNavigationBarItem(
-                          activeIcon: Icon(
-                            IconlyBold.home,
-                            size: 33,
-                            color: primarycolor,
-                          ),
-                          icon: Icon(
-                            IconlyLight.home,
-                            size: 33,
-                            color: primarycolor,
-                          ),
-                          label: "a",
-                          backgroundColor: darkcolor),
-                      BottomNavigationBarItem(
-                          activeIcon: Icon(
-                            IconlyBold.location,
-                            size: 33,
-                            color: primarycolor,
-                          ),
-                          icon: Icon(
-                            IconlyLight.location,
-                            size: 33,
-                            color: primarycolor,
-                          ),
-                          label: "a",
-                          backgroundColor: darkcolor),
-                      BottomNavigationBarItem(
-                          activeIcon: Icon(
-                            IconlyBold.profile,
-                            size: 33,
-                            color: primarycolor,
-                          ),
-                          icon: Icon(
-                            IconlyLight.profile,
-                            size: 33,
-                            color: primarycolor,
-                          ),
-                          label: "a",
-                          backgroundColor: darkcolor),
-                    ],
-                  ),
-                ))
-            : Center(
-                child: CircularProgressIndicator(),
-              ));
+                items: [
+                  BottomNavigationBarItem(
+                      activeIcon: Icon(
+                        IconlyBold.home,
+                        size: 33,
+                        color: primarycolor,
+                      ),
+                      icon: Icon(
+                        IconlyLight.home,
+                        size: 33,
+                        color: primarycolor,
+                      ),
+                      label: "a",
+                      backgroundColor: darkcolor),
+                  BottomNavigationBarItem(
+                      activeIcon: Icon(
+                        IconlyBold.location,
+                        size: 33,
+                        color: primarycolor,
+                      ),
+                      icon: Icon(
+                        IconlyLight.location,
+                        size: 33,
+                        color: primarycolor,
+                      ),
+                      label: "a",
+                      backgroundColor: darkcolor),
+                  BottomNavigationBarItem(
+                      activeIcon: Icon(
+                        IconlyBold.profile,
+                        size: 33,
+                        color: primarycolor,
+                      ),
+                      icon: Icon(
+                        IconlyLight.profile,
+                        size: 33,
+                        color: primarycolor,
+                      ),
+                      label: "a",
+                      backgroundColor: darkcolor),
+                ],
+              ),
+            )));
   }
 }
