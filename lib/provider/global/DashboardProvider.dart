@@ -16,7 +16,7 @@ import '../../model/UserData.dart';
 import '../../widget/BasicLoader.dart';
 
 class DashboardProvider with ChangeNotifier {
-  DatabaseReference database = FirebaseDatabase().ref();
+  DatabaseReference database = FirebaseDatabase.instance.ref();
   final storageRef = FirebaseStorage.instance.ref();
 
   List<WorkoutProgram> _workoutProgram = <WorkoutProgram>[];

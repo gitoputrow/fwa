@@ -65,13 +65,13 @@ class CustomBottomSheet extends StatelessWidget {
                         fontWeight: FontWeight.w600,
                         fontSize: 16,
                       ),
+                      indicatorSize: TabBarIndicatorSize.tab,
                       onTap: ontab,
                       unselectedLabelColor: primarycolor,
                       labelPadding: EdgeInsets.symmetric(vertical: 6),
-                      // indicatorPadding: EdgeInsets.only(left: 10),
                       indicator: BoxDecoration(
                           color: primarycolor, borderRadius: BorderRadius.circular(8)),
-
+                      dividerHeight: 0,
                       tabs: [
                         Text("Easy"),
                         Text("Hard"),

@@ -10,7 +10,7 @@ import '../../widget/ToastMessageCustom.dart';
 
 class AuthentificationProvider with ChangeNotifier {
   FirebaseFirestore firestore = FirebaseFirestore.instance;
-  DatabaseReference database = FirebaseDatabase().ref();
+  DatabaseReference database = FirebaseDatabase.instance.ref();
 
   PageController _pageControllerAuth = PageController();
   PageController get pageControllerAuth => _pageControllerAuth;

@@ -12,7 +12,10 @@ class Register1PageView extends StatelessWidget {
   final TextEditingController etWeight;
 
   const Register1PageView(
-      {super.key, required this.etFullName, required this.etHeight, required this.etWeight});
+      {super.key,
+      required this.etFullName,
+      required this.etHeight,
+      required this.etWeight});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +36,10 @@ class Register1PageView extends StatelessWidget {
             Text(
               "Create Your",
               textScaleFactor: 1,
-              style: TextStyle(color: primarycolor, fontSize: 44, fontWeight: FontWeight.w700),
+              style: TextStyle(
+                  color: primarycolor,
+                  fontSize: 44,
+                  fontWeight: FontWeight.w700),
             ),
             SizedBox(
               height: 4,
@@ -41,7 +47,10 @@ class Register1PageView extends StatelessWidget {
             Text(
               "Profile",
               textScaleFactor: 1,
-              style: TextStyle(color: primarycolor, fontSize: 44, fontWeight: FontWeight.w700),
+              style: TextStyle(
+                  color: primarycolor,
+                  fontSize: 44,
+                  fontWeight: FontWeight.w700),
             ),
             SizedBox(
               height: 18,
@@ -120,7 +129,9 @@ class Register1PageView extends StatelessWidget {
             Text(
               "Gender",
               style: TextStyle(
-                  fontSize: 16, fontWeight: FontWeight.w500, color: primarycolor.withOpacity(0.8)),
+                  fontSize: 16,
+                  fontWeight: FontWeight.w500,
+                  color: primarycolor.withOpacity(0.8)),
             ),
             SizedBox(
               height: 16,
@@ -142,21 +153,30 @@ class Register1PageView extends StatelessWidget {
                             ),
                           )))
                       .toList(),
-                  dropdownDecoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(16),
-                      color: blackcolor,
-                      border: Border.all(color: primarycolor.withOpacity(0.6), width: 1)),
+                  dropdownStyleData: DropdownStyleData(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(16),
+                          color: blackcolor,
+                          border: Border.all(
+                              color: primarycolor.withOpacity(0.6), width: 1))),
                   onChanged: (value) {
-                    context.read<DropDownButtonValueProvider>().selectedValue = value as String;
-                    
-                    AuthentificationProvider.read(context).gender = value as String;
+                    context.read<DropDownButtonValueProvider>().selectedValue =
+                        value as String;
+
+                    AuthentificationProvider.read(context).gender =
+                        value as String;
                     // controller.buttonPermissionEP();
                   },
-                  buttonDecoration: BoxDecoration(
+                  buttonStyleData: ButtonStyleData(
+                    decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(16),
                       color: blackcolor,
-                      border: Border.all(color: primarycolor.withOpacity(0.6), width: 1)),
-                  value: context.watch<DropDownButtonValueProvider>().selectedValue,
+                      border: Border.all(
+                          color: primarycolor.withOpacity(0.6), width: 1))
+                  ),
+                  value: context
+                      .watch<DropDownButtonValueProvider>()
+                      .selectedValue,
                   selectedItemBuilder: ((context) {
                     return context
                         .watch<DropDownButtonValueProvider>()
@@ -166,7 +186,9 @@ class Register1PageView extends StatelessWidget {
                             child: Text(
                               item,
                               style: TextStyle(
-                                  color: primarycolor, fontSize: 18, fontWeight: FontWeight.w700),
+                                  color: primarycolor,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w700),
                             )))
                         .toList();
                   }),

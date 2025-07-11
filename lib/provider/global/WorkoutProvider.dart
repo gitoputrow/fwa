@@ -12,7 +12,7 @@ import '../../page/DashboardPageView.dart';
 import '../../widget/BasicLoader.dart';
 
 class WorkoutProvider extends ChangeNotifier {
-  DatabaseReference database = FirebaseDatabase().ref();
+  DatabaseReference database = FirebaseDatabase.instance.ref();
 
   int _restTime = 30;
   int get restTime => _restTime;

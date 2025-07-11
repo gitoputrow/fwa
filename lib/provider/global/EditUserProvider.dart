@@ -22,7 +22,7 @@ import '../../page/DashboardPageView.dart';
 import '../../widget/BasicLoader.dart';
 
 class EditUserProvider with ChangeNotifier {
-  DatabaseReference database = FirebaseDatabase().ref();
+  DatabaseReference database = FirebaseDatabase.instance.ref();
   final storageRef = FirebaseStorage.instance.ref();
 
   UserData _userData = UserData();

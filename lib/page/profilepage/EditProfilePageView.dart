@@ -290,24 +290,28 @@ class _EditProfilePageState extends State<EditProfilePage> {
                                             ),
                                           )))
                                       .toList(),
-                                  dropdownDecoration: BoxDecoration(
+                                  dropdownStyleData: DropdownStyleData(decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(16),
                                       color: blackcolor,
                                       border: Border.all(
-                                          color: primarycolor.withOpacity(0.6), width: 1)),
+                                          color: primarycolor.withOpacity(0.6), width: 1))),
                                   onChanged: (value) {
                                     provider.selectedValue = value as String;
 
                                     // AuthentificationProvider.read(context).gender = value as String;
                                     // controller.buttonPermissionEP();
                                   },
-                                  buttonDecoration: BoxDecoration(
+                                  buttonStyleData: ButtonStyleData(
+                                    padding: EdgeInsets.only(right: 8, top: 2, bottom: 2),
+                                    decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(16),
                                       color: blackcolor,
                                       border: Border.all(
-                                          color: primarycolor.withOpacity(0.6), width: 1)),
+                                          color: primarycolor.withOpacity(0.6), width: 1))
+                                  ),
+                                  
                                   value: provider.selectedValue,
-                                  buttonPadding: EdgeInsets.only(right: 8, top: 2, bottom: 2),
+                                
                                   selectedItemBuilder: ((context) {
                                     return provider.items
                                         .map((item) => DropdownMenuItem<String>(

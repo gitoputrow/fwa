@@ -16,7 +16,7 @@ import '../../page/dashboardpage/HomePageView.dart';
 import '../../widget/BasicLoader.dart';
 
 class MyBodyProvider with ChangeNotifier {
-  DatabaseReference database = FirebaseDatabase().ref();
+  DatabaseReference database = FirebaseDatabase.instance.ref();
   final storageRef = FirebaseStorage.instance.ref();
 
   UserData _userData = UserData();
